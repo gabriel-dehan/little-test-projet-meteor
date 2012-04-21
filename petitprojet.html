@@ -1,0 +1,27 @@
+<head>
+  <title>petitprojet</title>
+</head>
+
+<body>
+    {{> commentList}}
+    {{> addComment}}
+</body>
+
+<template name="commentList">
+    Nous avons {{commentCount}}
+    {{#if hasComment}}
+        {{#each comment}}
+            <li><p>
+                {{text}}
+            </p></li>
+        {{/each}}
+    {{/if}}
+</template>
+
+<template name="addComment">
+    <p>Ajouter un commentaire</p>
+    <form>
+        <textarea rows="10" cols="100"></textarea>
+        <input type="submit"id="submit" value="COMMENT BITCH">
+    </form>
+</template>
